@@ -1,0 +1,15 @@
+name: 'rocrate-to-html'
+description: 'This creates a preview html file from the rocrate json metadata file'
+inputs:
+  crate_path:
+    description: 'Path to ro-crate-metadata.json'
+    required: false
+    default: '.'
+outputs:
+  preview:
+    description: 'HTML preview of the RO Crate'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.crate_path }}
