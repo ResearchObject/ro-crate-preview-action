@@ -5,10 +5,6 @@ inputs:
     description: 'Path to ro-crate-metadata.json'
     required: false
     default: '.'
-  preview_name:
-    description: 'Filename for preview page'
-    required: false
-    default: 'index.html'
 outputs:
   preview:
     description: 'HTML preview of the RO Crate'
@@ -17,4 +13,3 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.crate_path }}
-    - ${{ inputs.preview_name }}
