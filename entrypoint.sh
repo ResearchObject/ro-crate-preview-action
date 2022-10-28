@@ -1,4 +1,4 @@
 #!/bin/sh -l
 rochtml $1/ro-crate-metadata.json
-mv ro-crate-preview.html $2
-echo "::set-output name=preview::$2"
+ln -sf ro-crate-preview.html index.html
+echo "::set-output name=preview::ro-crate-preview.html"
