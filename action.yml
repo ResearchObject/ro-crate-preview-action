@@ -1,4 +1,4 @@
-name: 'rocrate-to-html'
+name: 'ro-crate-preview'
 description: 'This creates a preview html file from the rocrate json metadata file'
 inputs:
   crate_path:
