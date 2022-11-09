@@ -1,5 +1,8 @@
 name: 'ro-crate-preview'
 description: 'This creates a preview html file from the rocrate json metadata file'
+branding:
+  icon: 'book-open'
+  color: 'blue'
 inputs:
   crate_path:
     description: 'Path to ro-crate-metadata.json'
