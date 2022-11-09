@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build RO Crate Preview
-        uses: ResearchObject/ro-crate-preview-action@v1
+        uses: ResearchObject/ro-crate-preview-action@v1.1
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -38,8 +38,8 @@ jobs:
 
 Now, the action will run each time you push to the `master` branch.
 
-The above workflow has steps to checkout your repo code, build `ro-crate-preview.html`, 
-and commit this to the `gh-pages` branch. 
+The above workflow has steps to checkout your repo code, build `ro-crate-preview.html`,
+and commit this to the `gh-pages` branch.
 
 If you have your GitHub repo settings to build a live site from your `gh-pages` branch,
 another GitHub action will automatically be triggered to render your preview at
