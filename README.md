@@ -1,14 +1,16 @@
-# rocrate-to-ghpages-action
+# ro-crate-preview-action
 
 ## Overview
+
 This action builds an html preview page from an RO Crate metadata file.
 
-It is used in conjunction with other GitHub actions in order to
+It can be used in conjunction with other GitHub actions in order to
 commit the files to your (e.g.) gh-pages branch,
 and then deploy to your github.io site.
 
-## Usage
-Create a file in `.github/workflows/` called `rocrate-to-ghpages.yml`:
+## Example workflow
+
+Create a file in `.github/workflows/` in your repository called `ro-crate-to-ghpages.yml`:
 
 ```yaml
 name: RO Crate to GitHub Pages
@@ -16,7 +18,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-20.04
@@ -26,7 +27,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build RO Crate Preview
-        uses: gcapes/rocrate-to-ghpages-action@master
+        uses: ResearchObject/ro-crate-preview-action@v1
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -34,3 +35,12 @@ jobs:
           folder: .
           branch: gh-pages
 ```
+
+Now, the action will run each time you push to the `master` branch.
+
+The above workflow has steps to checkout your repo code, build `ro-crate-preview.html`, 
+and commit this to the `gh-pages` branch. 
+
+If you have your GitHub repo settings to build a live site from your `gh-pages` branch,
+another GitHub action will automatically be triggered to render your preview at
+`https://<username>.github.io/<repo>`.
