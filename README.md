@@ -1,4 +1,4 @@
-# ro-crate-preview-action
+# Build HTML preview of RO-Crate
 
 ## Overview
 
@@ -13,7 +13,7 @@ and then deploy to your github.io site.
 - Put your `ro-crate-metadata.json` in the root directory of your repo.
 
 - Create a file in `.github/workflows/` in your repository called `ro-crate-to-ghpages.yml`:
-  
+
   ```yaml
   name: RO Crate to GitHub Pages
   on:
@@ -27,10 +27,10 @@ and then deploy to your github.io site.
       steps:
         - name: Checkout
           uses: actions/checkout@v3
-  
+
         - name: Build RO Crate Preview
           uses: ResearchObject/ro-crate-preview-action@v1.1
-  
+
         - name: Deploy
           uses: JamesIves/github-pages-deploy-action@v4
           with:
