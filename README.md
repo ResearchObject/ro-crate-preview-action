@@ -29,7 +29,7 @@ and then deploy to your github.io site.
           uses: actions/checkout@v3
 
         - name: Build RO Crate Preview
-          uses: ResearchObject/ro-crate-preview-action@v1.1
+          uses: ResearchObject/ro-crate-preview-action@v1.0.2
 
         - name: Deploy
           uses: JamesIves/github-pages-deploy-action@v4
