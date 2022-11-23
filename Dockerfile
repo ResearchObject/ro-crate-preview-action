@@ -3,7 +3,7 @@
 FROM node:19
 
 ## Install ro-crate-html-js
-RUN npm install --global ro-crate-html-js
+RUN npm install --global ro-crate-html
 
 ## Copy code file from repo to Docker filesystem
 COPY entrypoint.sh /entrypoint.sh
