@@ -22,7 +22,7 @@ and then deploy to your github.io site.
         - master
   jobs:
     build-and-deploy:
-      runs-on: ubuntu-20.04
+      runs-on: ubuntu-22.04
       concurrency: ci-${{github.ref}}
       steps:
         - name: Checkout
