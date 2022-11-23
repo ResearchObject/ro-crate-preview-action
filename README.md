@@ -12,7 +12,7 @@ and then deploy to your github.io site.
 
 - Put your `ro-crate-metadata.json` in the root directory of your repo.
 
-- Create a file in `.github/workflows/` in your repository called `ro-crate-to-ghpages.yml`:
+- Create a file `.github/workflows/ro-crate-to-ghpages.yml` with the following contents:
 
   ```yaml
   name: RO Crate to GitHub Pages
