@@ -2,7 +2,7 @@
 
 ## Overview
 
-This action builds an html preview page from an RO Crate metadata file.
+This action builds an html preview page from an RO-Crate metadata file.
 
 It can be used in conjunction with other GitHub actions in order to
 commit the files to your (e.g.) gh-pages branch,
@@ -15,7 +15,7 @@ and then deploy to your github.io site.
 - Create a file `.github/workflows/ro-crate-to-ghpages.yml` with the following contents:
 
   ```yaml
-  name: RO Crate to GitHub Pages
+  name: RO-Crate to GitHub Pages
   on:
     push:
       branches:
@@ -28,7 +28,7 @@ and then deploy to your github.io site.
         - name: Checkout
           uses: actions/checkout@v3
 
-        - name: Build RO Crate Preview
+        - name: Build RO-Crate Preview
           uses: ResearchObject/ro-crate-preview-action@v1.2.0
 
         - name: Upload artifact
@@ -69,10 +69,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build RO Crate Preview
+      - name: Build RO-Crate Preview
         uses: ResearchObject/ro-crate-preview-action@v1.2.0
               
-      - name: Commit RO Crate Preview
+      - name: Commit RO-Crate Preview
         uses: swinton/commit@v2.0.0
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
