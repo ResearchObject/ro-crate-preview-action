@@ -29,7 +29,7 @@ and then deploy to your github.io site.
           uses: actions/checkout@v3
 
         - name: Build RO-Crate Preview
-          uses: ResearchObject/ro-crate-preview-action@v1.2.0
+          uses: ResearchObject/ro-crate-preview-action@v1.3.0
 
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v1
@@ -70,7 +70,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build RO-Crate Preview
-        uses: ResearchObject/ro-crate-preview-action@v1.2.0
+        uses: ResearchObject/ro-crate-preview-action@v1.3.0
               
       - name: Commit RO-Crate Preview
         uses: swinton/commit@v2.0.0
