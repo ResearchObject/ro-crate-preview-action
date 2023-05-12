@@ -48,6 +48,19 @@ The action will run each time you push to the `main` branch.
 The above workflow has steps to checkout your repo code, build `ro-crate-preview.html`,
 and commit this to the `gh-pages` branch. Note that this workflow will publish the whole of the repository "as-is" without any page rendering.
 
+### Specifying RO-Crate Root
+
+By default this action looks for `ro-crate-metadata.json` in the root of the repository. You can override the path to the RO-Crate root by providing the `crate_path` argument:
+
+```yaml
+      - name: Build RO Crate Preview
+        uses: ResearchObject/ro-crate-preview-action@v1.2.0
+        with:
+          crate_path: crates/example4
+```
+
+The above will look for `crates/example4/ro-crate-metadata.json` and generate `crates/example4/ro-crate-preview.html` and the symlink `crates/example4/index.html`
+
 ### Automatic commit
 
 Instead of publishing the generated RO-Crate preview directly to GitHub Pages, you may prefer
