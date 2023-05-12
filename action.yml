@@ -1,11 +1,11 @@
 name: 'ro-crate-preview'
-description: 'This creates a preview html file from the rocrate json metadata file'
+description: 'This creates a preview html file from RO-Crate Metadata File (ro-crate-metadata.json)'
 branding:
   icon: 'book-open'
   color: 'blue'
 inputs:
   crate_path:
-    description: 'Path to ro-crate-metadata.json'
+    description: 'Path to RO-Crate Root folder'
     required: false
     default: '.'
 outputs:
